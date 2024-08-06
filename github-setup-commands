@@ -10,7 +10,7 @@ STEPS TO CREATE GITHUB PROJECT AND COMMIT:
 6. git remote set-url origin https://USERNAME:<MYTOKEN>@github.com/USERNAME/REPO.git (mask secrets)
 7. git push --set-upstream origin master
 
-
+=================================================================================
 NEXT TIME MODIFY:
 
 1. git pull
