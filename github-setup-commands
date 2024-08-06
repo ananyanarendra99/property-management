@@ -7,7 +7,7 @@ STEPS TO CREATE GITHUB PROJECT AND COMMIT:
 3. git commit -m "first commit"
 4. git remote add origin https://github.com/ananyanarendra99/property-management.git
 5. git remote set-url origin
-6. https://ananyanarendra99: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@github.com/ananyanarendra99/property-management.git
+6. git remote set-url origin https://USERNAME:<MYTOKEN>@github.com/USERNAME/REPO.git
 7. git push --set-upstream origin master
 
 
