@@ -17,6 +17,8 @@ public class PropertyController {
 
     @Value("${pms.dummy:}")
     public String dummy;
+    @Value("${spring.h2.console.path")
+    public String path;
 
     @Autowired
     public PropertyService propertyService;
@@ -27,6 +29,7 @@ public class PropertyController {
     @PostMapping("/save")
     public ResponseEntity<PropertyDTO> saveProperty(@RequestBody PropertyDTO propertyDTO){
         System.out.println(dummy);
+        System.out.println(path);
         propertyDTO = propertyService.saveProperties(propertyDTO);
         ResponseEntity<PropertyDTO> responseEntity = new ResponseEntity<PropertyDTO>(propertyDTO, HttpStatus.CREATED);
         return responseEntity;
