@@ -9,15 +9,19 @@ import javax.persistence.*;
 @Getter
 @Setter
 @Entity
-@Table(name = "PROPERTY_DETAILS")
+@Table(name = "USER_DETAILS")
 @NoArgsConstructor
-public class PropertyEntity {
+public class UserEntity {
 
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
     private Long id;
-    private String title;
-    private String description;
-    private Double price;
-    private String address;
+    private String ownerName;
+    @Column(name="EMAIL", nullable = false)
+    private String ownerEmail;
+    private String phone;
+    private String password;
+
+
+
 }

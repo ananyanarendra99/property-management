@@ -9,7 +9,6 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import java.util.ArrayList;
-import java.util.Collections;
 import java.util.List;
 import java.util.Optional;
 
@@ -17,7 +16,7 @@ import java.util.Optional;
 public class PropertyServiceImpl implements PropertyService {
 
     @Autowired
-    public PropertyRepository propertyRepository;
+    private PropertyRepository propertyRepository;
 
     @Autowired
     private PropertyConverter propertyConverter;
@@ -56,8 +55,6 @@ public class PropertyServiceImpl implements PropertyService {
            pe.setDescription(propertyDTO.getDescription());
            pe.setAddress(propertyDTO.getAddress());
            pe.setPrice(propertyDTO.getPrice());
-           pe.setOwnerName(propertyDTO.getOwnerName());
-           pe.setOwnerEmail(propertyDTO.getOwnerEmail());
 
            pe =propertyRepository.save(pe);
            dto = propertyConverter.convertEntitiytoDTO(pe);

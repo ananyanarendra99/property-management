@@ -8,6 +8,7 @@ class PropertyManagementApplicationTests {
 
 	@Test
 	void contextLoads() {
+		//not yet coded
 	}
 
 }
